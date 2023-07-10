@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}!
+  p The current list of endpoints includes: 
+  //- loop through the endpoints and display them
+  ul
+    each endpoint in endpoints
+      li
+        a(href='/api/' + endpoint) #{endpoint}
