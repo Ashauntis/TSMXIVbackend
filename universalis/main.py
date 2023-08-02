@@ -1,9 +1,11 @@
 from pyuniversalis import Universalis
+import redis
 
 # 39872
 
 def main():
     u = Universalis()
+    r = redis.Redis(host='localhost', port=6379, db=0)
     
     # u.get_item_current_data_by_region(39872)
     items = u.get_marketable_items()
